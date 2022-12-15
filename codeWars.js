@@ -67,8 +67,38 @@ function sumTwoSmallestNumbers(numbers) {
           
         }
          
-        
+        //                                                                                                                        // 
+        //^ 12/15/22
 
+        //1
+        // Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+        function digitize(n) {
+  
+          let digits = n.toString().split("")
+          let realDigits = digits.map(Number)
+          let answer = realDigits.reverse()
+          return answer 
+          }
+
+
+//2
+// Make a program that filters a list of strings and returns a list with only your friends name in it.
+
+// If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+function friend(friends){
+  return friends.filter(e => e.length === 4);
+}
+
+//3
+// You need to write regex that will validate a password to make sure it meets the following criteria:
+
+//     At least six characters long
+//     contains a lowercase letter
+//     contains an uppercase letter
+//     contains a digit
+//     only contains alphanumeric characters (note that '_' is not alphanumeric)
+
+const REGEXP = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])[A-Za-z0-9]{6,}$/;
 
 
 
