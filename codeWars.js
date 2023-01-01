@@ -117,7 +117,55 @@ function persistence(num) {
     return 1 + persistence(nextNum);
   }
   
+
   
+//& 1/1/2023
+
+// Write function bmi that calculates body mass index (bmi = weight / height2).
+
+// if bmi <= 18.5 return "Underweight"
+
+// if bmi <= 25.0 return "Normal"
+
+// if bmi <= 30.0 return "Overweight"
+
+// if bmi > 30 return "Obese"
+
+function bmi(weight, height) {
+  let bmData = weight / height ** 2
+  if (bmData <= 18.5) {
+    return "Underweight"
+  }
+   else if (bmData <= 25.0) {
+     return "Normal"
+   }
+   else if (bmData <= 30.0) {
+     return "Overweight"
+   }
+   else if (bmData > 30){
+     return "Obese"
+   }
+ }
+
+ function moveZeros(arr) {
+ 
+
+  // Write an algorithm that takes an array and moves all of the zeros to the end, preserving the order of the other elements.
+
+  //first trying filter
+  //filter out zeros
+  //count array length vs filtered length
+  //add that many zeroes to the end
+
+
+const filtered = arr.filter(entry => entry !== 0)
+const numOfZeroes = arr.length - filtered.length
+
+for ( let i =0; i < numOfZeroes; i++){
+  filtered.push(0) 
+}
+return filtered
+}
 
 
 
