@@ -213,3 +213,20 @@ function generateHashtag (str) {
   };
   
 };
+
+
+//& 1/6/2023
+// Complete the function scramble(str1, str2) that returns true if a portion of str1 characters can be rearranged to match str2, otherwise returns false.
+
+function scramble(str1, str2) {
+  var l = str2.length;
+  for (var i = 0; i < l; i++) {
+    if (str1.indexOf(str2[i]) > -1) {
+      str1 = str1.replace(str2[i], '');
+    } else {
+      return false;
+    }
+  }
+  return true;
+}
+
