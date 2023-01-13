@@ -239,9 +239,50 @@ function sortArray(array) {
 
   const odds = array.filter(x => x%2).sort((a, b) => a - b);
   return array.map(x => x%2 ? odds.shift() : x);
-
-
 console.log(sortOddsOnly(array));
+}
 
 
+//& 1/13/2023
+
+// Your job is to write a function which increments a string, to create a new string.
+
+//     If the string already ends with a number, the number should be incremented by 1.
+//     If the string does not end with a number. the number 1 should be appended to the new string.
+
+function incrementString (strng) {
+
+  //check for numbers
+  //if numbers are present, seperate them and add one.
+  //if numbers are not presents append one to the end of string
+  //.join() everything together and return
+  
+
+  if(/\d/.test(strng)){
+    
+let chars = strng.split('')
+
+let nums = chars.filter(char => /\d/.test(char))
+console.log(nums)
+    
+let realNums = nums.join('')
+console.log(realNums)
+
+
+
+let letters = chars.filter(char => /[a-zA-Z]/.test(char));
+console.log(lette
+  }
+  
+  else {
+    let answer = strng+1
+    return answer
+  }
+  
+}
+
+//^ better solution..
+
+function incrementString(str) {
+  return str.replace(/([0-8]|\d?9+)?$/, (e) => (e ? +e + 1 : 1));
 }
